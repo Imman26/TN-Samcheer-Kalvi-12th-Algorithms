@@ -1,0 +1,62 @@
+1. Write algorithmic function definition to find the power of the given number.
+
+(requires: b>=0)
+(returns: a to the power of b)
+let rec pow (a: int)(b: int): int:=
+        if b=0 then 1
+        else a*pow a(b-1)
+        
+2. Write algorithmic function definition to check whether the entered number is even or odd.
+
+(requires: x>= 0)
+       let rec even x :=
+       x=0 || odd (x-1)
+       return ‘even’
+(requires: x>= 0)
+       let odd x :=
+       x<>0 && even (x-1)
+       return ‘odd’
+       
+3. Write algorithmic function that finds the minimum of its three arguments.
+
+let min 3 x y z :=
+       if x < y then		
+               if x < z then x else z
+else
+	       if y < z then y else z
+	       
+4. Write algorithmic function definition to find the square of the given number.
+
+let square x
+       return: x * x
+       
+5.  Write algorithmic function definition to determine the greatest commondivisor (gcd) of two positive integer numbers.
+
+let rec gcd a b :=
+       if b <> 0 then gcd b (a mod b)
+       else
+       return a;
+       
+6. Write algorithmic function definition for Chameleons of Chromeland problem using function
+
+let rec monochromatize a b c :=
+      if a > 0 then
+         a, b, c := a-1, b-1, c+2
+      else
+	 a:=0, b:=0, c:= a + b + c
+	 return c
+	
+7. Write algorithmic function definition to find the minimum among 3 numbers.
+
+let min 3 x y z : =
+      if x < y then
+      if x < z then x else z
+else
+      if y < z then y else z
+
+8. Write algorithmic recursive function definition to find the sum of n natural numbers.
+
+let rec sum num:=
+       if (num! = 0) then return num + sum (num – 1)
+else
+       return num
